@@ -35,26 +35,26 @@ name = "list_clock_frequency"
 path = "bin/list_clock_frequency.rs"
 
 [dependencies]
-array_tool = "1"
-cli-table = "0.4"
-enum-display-derive = "0.1"
-enum-utils = "0.1.2"
-itertools = "0.10"
-lazy_static = "1.4"
-memoize = { version = "0.3.1", features = ["full"] }
-nom = "7.1"
-rayon = "1.5"
-regex = "1.5"
-serde = { version = "1.0.156", features = ["derive"] }
-strum = "0.24"
-strum_macros = "0.24"
-thiserror = "1"
+array_tool = { workspace = true }
+cli-table = { workspace = true }
+enum-display-derive = { workspace = true }
+enum-utils = { workspace = true }
+itertools = { workspace = true }
+lazy_static = { workspace = true }
+memoize = { workspace = true }
+nom = { workspace = true }
+rayon = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true }
+strum = { workspace = true }
+strum_macros = { workspace = true }
+thiserror = { workspace = true }
 tokio = { workspace = true }
-tracing = "0.1"
-tracing-subscriber = { version = "0.3.1", features = ["env-filter", "json"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
 
 [dev-dependencies]
-eyre = "0.6"
+eyre = { workspace = true }
 
 [package.metadata.docs.rs]
 all-features = true

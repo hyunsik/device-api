@@ -1,9 +1,9 @@
 [workspace]
 
 members = [
-    "device-api",
     "bindings/python"
-]
+,
+    "device-api"]
 
 [workspace.package]
 version = "0.2.2-dev"
@@ -16,4 +16,31 @@ repository = "https://github.com/furiosa-ai/device-api"
 readme = "README.md"
 
 [workspace.dependencies]
+array_tool = "1"
+cli-table = "0.4"
+chrono = "0.4.24"
+enum-display-derive = "0.1"
+enum-utils = "0.1.2"
+eyre = "0.6"
+git2 = "0.17.1"
+itertools = "0.10"
+lazy_static = "1.4"
+memoize = { version = "0.3.1", features = ["full"] }
+nom = "7.1"
+pyo3 = "0.19.1"
+pyo3-asyncio = { version = "0.19", features = ["attributes", "tokio-runtime"] }
+rayon = "1.5"
+regex = "1.5"
+serde = { version = "1.0.156", features = ["derive"] }
+strum = "0.24"
+strum_macros = "0.24"
+thiserror = "1"
 tokio = { version = "1.19.0", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3.1", features = ["env-filter", "json"] }
+
+furiosa-device = { path = "device-api", features = ["blocking"] }
+
+[patch.crates-io]
+# XXX: until https://github.com/awestlake87/pyo3-asyncio/pull/97 is merged
+pyo3-asyncio = { git = "https://github.com/furiosa-ai/pyo3-asyncio.git", branch = "pyo3-0.19" }

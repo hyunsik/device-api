@@ -9,11 +9,11 @@ name = "furiosa_native_device"
 crate-type = ["cdylib"]
 
 [dependencies]
-furiosa-device = { path = "../../device-api", features = ["blocking"] }
-pyo3 = "0.18.1"
-pyo3-asyncio = { version = "0.18", features = ["attributes", "tokio-runtime"] }
+furiosa-device = { workspace = true }
+pyo3 = { workspace = true }
+pyo3-asyncio = { workspace = true }
 tokio = { workspace = true }
 
 [build-dependencies]
-chrono = "0.4.24"
-git2 = "0.17.1"
+chrono = { workspace = true }
+git2 = { workspace = true }
